@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #111111;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ========================= */
+/* SCROLL ANIMATIONS */
+/* ========================= */
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-scroll {
+  animation: scrollLeft 25s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scrollRight 25s linear infinite;
+}
+
+/* ========================= */
+/* BACKGROUND SLIDE */
+/* ========================= */
+
+@keyframes bgSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-bg {
+  animation: bgSlide 30s linear infinite;
+}
+
+/* ========================= */
+/* TRUCK VIBRATION */
+/* ========================= */
+
+@keyframes truckVibrate {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 2px); }
+}
+
+.animate-truck {
+  animation: truckVibrate 0.3s ease-in-out infinite;
+}
+
+/* ========================= */
+/* FLOATING */
+/* ========================= */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
