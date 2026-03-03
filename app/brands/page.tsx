@@ -65,7 +65,7 @@ export default function Brands() {
     <>
       <div className="min-h-screen bg-[#f3f4f6] px-16 pt-0">
         {/* HEADER */}
-        <header className="pt-8 flex items-center justify-between max-w-[1400px] mx-auto">
+        <header className="pt-0 flex items-center justify-between max-w-[1400px] mx-auto">
           {/* LOGO */}
           <Reveal>
         <Link href="/" className="flex items-center">
