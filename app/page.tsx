@@ -98,7 +98,7 @@ shadow-[0_30px_80px_rgba(0,0,0,0.08)] border-t border-gray-200">
     {[...Array(2)].map((_, i) => (
       <div key={i} className="flex gap-20 items-center">
 
-        <img src="/brands/mydreem.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
+        <img src="/brands/MYDREEM.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/ertay.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/sr25.png" className="h-28 object-contain transition duration-300 hover:scale-140" />
         <img src="/brands/marko.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
