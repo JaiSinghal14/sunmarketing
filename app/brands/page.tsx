@@ -70,7 +70,7 @@ export default function Brands() {
           <Reveal>
         <Link href="/" className="flex items-center">
   <Image
-    src="/logo.png"
+    src="/LOGO.png"
     alt="The Sun Marketing Alliance"
     width={250}
     height={250}
