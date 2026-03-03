@@ -98,14 +98,14 @@ shadow-[0_30px_80px_rgba(0,0,0,0.08)] border-t border-gray-200">
     {[...Array(2)].map((_, i) => (
       <div key={i} className="flex gap-20 items-center">
 
-        <img src="/brands/MYDREEM.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
+        <img src="/brands/mydreem.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/ertay.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/sr25.png" className="h-28 object-contain transition duration-300 hover:scale-140" />
         <img src="/brands/marko.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/meera.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/richberry.png" className="h-32 object-contain transition duration-300 hover:scale-135" />
         <img src="/brands/saras.png" className="h-32 object-contain transition duration-300 hover:scale-150" />
-        <img src="/brands/HOPPIN.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
+        <img src="/brands/hoppin.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/kaypee.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
 
       </div>
@@ -124,11 +124,11 @@ shadow-[0_30px_80px_rgba(0,0,0,0.08)] border-t border-gray-200">
         <img src="/brands/amal.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/madhur.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/ankit.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
-        <img src="/brands/PANCHWATI.png" className="h-30 object-contain transition duration-300 hover:scale-155" />
-        <img src="/brands/aUsome.png" className="h-30 object-contain transition duration-300 hover:scale-105" />
-        <img src="/brands/RICHBITE.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
+        <img src="/brands/panchwati.png" className="h-30 object-contain transition duration-300 hover:scale-155" />
+        <img src="/brands/ausome.png" className="h-30 object-contain transition duration-300 hover:scale-105" />
+        <img src="/brands/richbite.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/shivani.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
-        <img src="/brands/TRANG.png" className="h-42 object-contain transition duration-300 hover:scale-150" />
+        <img src="/brands/trang.png" className="h-42 object-contain transition duration-300 hover:scale-150" />
         <img src="/brands/bunty.png" className="h-36 object-contain transition duration-300 hover:scale-150" />
 
       </div>
