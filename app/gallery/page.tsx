@@ -9,11 +9,11 @@ export default function Gallery() {
     <>
     <div className="min-h-screen bg-[#f3f4f6] px-16 pt-0">
       {/* HEADER */}
-      <header className="pt-8 flex items-center justify-between max-w-[1400px] mx-auto">
+      <header className="pt-0 flex items-center justify-between max-w-[1400px] mx-auto">
         {/* LOGO */}
         <Link href="/" className="flex items-center">
           <img
-            src="/logo.png"
+            src="/LOGO.png"
             alt="The Sun Marketing Alliance"
             className="h-40 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]"
           />
