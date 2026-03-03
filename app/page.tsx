@@ -14,7 +14,7 @@ export default function Home() {
         <Reveal>
         <Link href="/" className="flex items-center">
   <Image
-    src="/logo.png"
+    src="/LOGO.png"
     alt="The Sun Marketing Alliance"
     width={250}
     height={250}
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="flex justify-center">
           <Reveal>
           <img
-            src="/tsma_new.png"
+            src="/TSMA_NEW.png"
             alt="TSMA Distribution"
             className="w-[650px] md:w-[750px] lg:w-[750px] object-contain"
           />
