@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
@@ -5,6 +8,42 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+const [loading,setLoading]=useState(false);
+const [success,setSuccess]=useState(false);
+  const handleSubmit = async (e:any) => {
+
+e.preventDefault();
+
+setLoading(true);
+setSuccess(false);
+
+const formData=new FormData(e.target);
+
+const data={
+name:formData.get("name"),
+email:formData.get("email"),
+phone:formData.get("phone"),
+type:formData.get("type"),
+message:formData.get("message")
+};
+
+await fetch("/api/contact",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+});
+
+setLoading(false);
+setSuccess(true);
+
+formRef.current?.reset();
+
+};
+
   return (
     <>
       <main className="min-h-screen bg-[#f3f4f6] px-4 sm:px-6 md:px-10 lg:px-16 pt-3 md:pt-4">
@@ -166,48 +205,56 @@ export default function Contact() {
 
           {/* Contact Form */}
           <Reveal>
-            <form className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <form
+ref={formRef}
+onSubmit={handleSubmit}
+className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
+>
               <div className="space-y-3">
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">
                     Full Name*
                   </label>
                   <input
-                    type="text"
-                    placeholder="Enter your full name"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
-                    required
-                  />
+  name="name"
+  type="text"
+  placeholder="Enter your full name"
+  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
+  required
+/>
                 </div>
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">
                     Email*
                   </label>
                   <input
-                    type="email"
-                    placeholder="you@example.com"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
-                    required
-                  />
+  name="email"
+  type="email"
+  placeholder="you@example.com"
+  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
+  required
+/>
                 </div>
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">
                     Phone Number
                   </label>
                   <input
-                    type="tel"
-                    placeholder="+91 ..."
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
-                  />
+  name="phone"
+  type="tel"
+  placeholder="+91 ..."
+  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-orange-500"
+/>
                 </div>
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">
                     I am a*
                   </label>
                   <select
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base bg-white focus:outline-none focus:border-orange-500"
-                    defaultValue="brand"
-                  >
+  name="type"
+  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base bg-white focus:outline-none focus:border-orange-500"
+  defaultValue="brand"
+>
                     <option value="brand">Brand / Manufacturer</option>
                     <option value="wholesaler">Wholesaler / Distributor</option>
                     <option value="retailer">Retailer</option>
@@ -222,21 +269,34 @@ export default function Contact() {
                     Requirements / Message*
                   </label>
                   <textarea
-                    placeholder="Tell us briefly about your distribution or partnership requirements..."
-                    rows={6}
-                    className="w-full flex-1 border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base resize-none focus:outline-none focus:border-orange-500"
-                    required
-                  />
+  name="message"
+  placeholder="Tell us briefly about your distribution or partnership requirements..."
+  rows={6}
+  className="w-full flex-1 border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base resize-none focus:outline-none focus:border-orange-500"
+  required
+/>
                 </div>
 
                 <p className="text-[11px] sm:text-xs text-gray-500">
-                  By submitting this form you agree to be contacted by our team over
-                  phone or email regarding your enquiry.
-                </p>
+By submitting this form you agree to be contacted by our team over
+phone or email regarding your enquiry.
+</p>
 
-                <button className="mt-1 inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-7 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base">
-                  Submit Inquiry
-                </button>
+<button
+type="submit"
+disabled={loading}
+className={`mt-1 inline-flex items-center justify-center text-white font-semibold px-7 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base transition
+${loading ? "bg-gray-400 cursor-not-allowed" : "bg-orange-500 hover:bg-orange-600"}
+`}
+>
+{loading ? "Sending..." : "Submit Inquiry"}
+</button>
+
+{success && (
+<p className="text-green-600 text-sm font-medium mt-2">
+Inquiry sent successfully! We will contact you soon.
+</p>
+)}
               </div>
             </form>
           </Reveal>

@@ -18,7 +18,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between max-w-[1400px] mx-auto py-3 md:py-4">
+    <header className="flex items-center justify-between max-w-[1400px] mx-auto py-2 md:py-2">
       <Reveal>
         <Link
           href="/"
