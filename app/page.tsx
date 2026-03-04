@@ -62,7 +62,7 @@ setSuccess(false);
   max-w-[1400px] mx-auto
   mt-0 md:mt-4 mb-8 sm:mb-12 md:mb-16
   gap-2 md:gap-16
-  px-4 sm:px-6 md:px-10
+  px-0 sm:px-6 md:px-10
   py-0 sm:py-2 md:py-10
   md:rounded-[32px]
   md:bg-gradient-to-b md:from-white/80 md:to-white/55
@@ -78,7 +78,7 @@ setSuccess(false);
       alt="TSMA Distribution"
       width={800}
       height={600}
-      className="block w-full max-w-[320px] sm:max-w-[440px] md:max-w-[620px] lg:max-w-[760px] xl:max-w-[840px] h-auto"
+      className="block w-full max-w-[260px] sm:max-w-[340px] md:max-w-[520px] lg:w-[32vw] lg:max-w-[950px] h-auto"
       priority
     />
   </Reveal>
@@ -95,11 +95,11 @@ setSuccess(false);
           uppercase
           leading-[0.9]
           tracking-tight
-          text-[34px]
+          text-[40px]
           sm:text-[44px]
-          md:text-[72px]
-          lg:text-[96px]
-          xl:text-[110px]
+          md:text-[76px]
+          lg:text-[100px]
+          xl:text-[114px]
           mt-4
         "
       >
