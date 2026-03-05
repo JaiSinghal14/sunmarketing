@@ -36,6 +36,13 @@ export default function Brands() {
     'saras.png': 'https://myswipe.store/hapur/category/SARAS%20PAN-50',
     'shivani.png': 'https://myswipe.store/hapur/category/SHIVANI-49',
     'panchwati.png': 'https://myswipe.store/hapur/category/PANCHWATI-44',
+    'kingbite.png': 'https://myswipe.store/hapur/category/KINGBITE-70',
+    'candico.png': 'https://myswipe.store/hapur/category/CANDICO-1128041',
+    'midas.png': 'https://myswipe.store/hapur/category/MIDAS-1128039',
+    '3dee.png': 'https://myswipe.store/hapur/category/3D%20MURGA-1128034',
+    'marshmallow.png': 'https://myswipe.store/hapur/category/MARSHMELLOW-1128038',
+    'turtle.png': 'https://myswipe.store/hapur/category/BALOON-59',
+    'junior.png': 'https://myswipe.store/hapur/category/JUNIOR-1128033',
   };
 
   // slug helper must be declared before use
@@ -77,11 +84,6 @@ export default function Brands() {
           <Reveal>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
               We partner with a wide variety of FMCG manufacturers across categories to bring quality products to our distribution network. Browse the brands below.
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="mt-5 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-600 text-center">
-              (<span className="font-semibold">Note:</span> This is a subset of our offerings. Visit the store below to see the full list of brands.)
             </p>
           </Reveal>
         </section>
@@ -136,7 +138,7 @@ export default function Brands() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
               </svg>
-              <a href="/store" className="bg-orange-500 hover:bg-orange-600 transition text-black font-semibold px-7 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl inline-block text-sm sm:text-base">
+              <a href="https://myswipe.store/hapur/" className="bg-orange-500 hover:bg-orange-600 transition text-black font-semibold px-7 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl inline-block text-sm sm:text-base">
                 Explore Our Full Store
               </a>
             </div>
